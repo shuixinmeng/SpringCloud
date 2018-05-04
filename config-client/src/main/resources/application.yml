@@ -1,5 +1,3 @@
-server:
-  port: 8881
 spring:
   application:
     name: config-client
@@ -7,4 +5,14 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888/
+    discovery: true
+    serviceId: config-server
+
+# spring.cloud.config.uri= http://localhost:8888/
+server:
+  port: 8881
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

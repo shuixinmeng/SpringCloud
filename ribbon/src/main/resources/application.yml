@@ -2,7 +2,7 @@ server:
   port: 8764
 spring:
   application:
-    name: ribbon
+    name: config-server
 eureka:
   client:
     serviceUrl:
